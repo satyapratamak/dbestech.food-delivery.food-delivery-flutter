@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_flutter/home/food_page_body.dart';
 import 'package:food_delivery_flutter/utils/colors.dart';
+import 'package:food_delivery_flutter/utils/dimensions.dart';
 import 'package:food_delivery_flutter/widgets/big_text.dart';
 import 'package:food_delivery_flutter/widgets/small_text.dart';
 
@@ -15,6 +16,8 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
+    print("Device Height : " + MediaQuery.of(context).size.height.toString());
+    print("Device Width : " + MediaQuery.of(context).size.width.toString());
     return Scaffold(
       body: Column(
         // Header, Body, and Footer
@@ -23,8 +26,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
           Container(
             child: Container(
               child: Container(
-                margin: const EdgeInsets.only(top: 45, bottom: 15),
-                padding: const EdgeInsets.only(left: 20, right: 20),
+                margin: EdgeInsets.only(
+                    top: Dimensions.height45, bottom: Dimensions.height15),
+                padding: EdgeInsets.only(
+                    left: Dimensions.width20,
+                    right: Dimensions.width20), // left 20, right 20
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   // Header Bar
@@ -44,11 +50,13 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     Center(
                       child: Container(
                         // Search Button
-                        width: 45,
-                        height: 45,
-                        child: const Icon(Icons.search, color: Colors.white),
+                        width: Dimensions.width45, // 45
+                        height: Dimensions.height45, // 45
+                        child: Icon(Icons.search,
+                            color: Colors.white, size: Dimensions.iconSize24),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius:
+                              BorderRadius.circular(Dimensions.height15),
                           color: AppColors.mainColor,
                         ),
                       ),
