@@ -48,7 +48,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       children: [
         Container(
           //color: Colors.redAccent,
-          height: 320,
+          height: 310,
           child: PageView.builder(
             controller: pageController,
             itemCount: 5,
