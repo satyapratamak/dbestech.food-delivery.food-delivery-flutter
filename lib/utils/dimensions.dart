@@ -9,16 +9,20 @@ class Dimensions {
   static double pageView = screenHight / 2.135714285714731; // 320
 
 // dynamic height
-  static double height10 = screenHight / 68.34285714285714;
+  static double height1 = screenHight / 683.4285714285714;
+  static double height10 = height1 * 10;
   static double height15 = height10 * 1.5;
   static double height20 = height10 * 2;
   static double height30 = height10 * 3;
   static double height24 = height10 * 2.4;
   static double height45 = height10 * 4.5;
+  static double height2 = height1 * 2;
+  static double height3 = height1 * 3;
 
   // dynamic width
-  static double width10 = screenWidth / 41.142857142857144;
-  static double width5 = width10 * 0.5;
+  static double width1 = screenWidth / 411.42857142857144;
+  static double width10 = width1 * 10;
+  static double width5 = width1 * 5;
   static double width15 = width10 * 1.5;
   static double width20 = width10 * 2;
   static double width30 = width10 * 3;

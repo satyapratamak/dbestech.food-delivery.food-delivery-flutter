@@ -68,6 +68,27 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(Dimensions.radius5)),
           ),
+        ),
+        SizedBox(height: Dimensions.height30),
+        // Popular Section Title
+        Container(
+          margin: EdgeInsets.only(left: Dimensions.width30),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigText(text: "Popular", color: AppColors.mainBlackColor),
+              SizedBox(width: Dimensions.width10),
+              Container(
+                margin: EdgeInsets.only(bottom: Dimensions.height3),
+                child: BigText(text: ".", color: Colors.black26),
+              ),
+              SizedBox(width: Dimensions.width10),
+              Container(
+                margin: EdgeInsets.only(bottom: Dimensions.height2),
+                child: SmallText(text: "Food Pairing"),
+              ),
+            ],
+          ),
         )
       ],
     );
