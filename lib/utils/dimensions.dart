@@ -18,6 +18,12 @@ class Dimensions {
   static double height45 = height10 * 4.5;
   static double height2 = height1 * 2;
   static double height3 = height1 * 3;
+  static double height5 = height1 * 5;
+  static double height700 = height1 * 700;
+  static double height120 = height1 * 120;
+  static double height110 = height1 * 110;
+  static double height100 = height1 * 100;
+  static double height105 = height1 * 105;
 
   // dynamic width
   static double width1 = screenWidth / 411.42857142857144;
@@ -27,6 +33,8 @@ class Dimensions {
   static double width20 = width10 * 2;
   static double width30 = width10 * 3;
   static double width45 = width10 * 4.5;
+  static double width120 = width1 * 120;
+  static double width200 = width1 * 200;
 
   static double font20 = height20;
   static double font15 = height15;
@@ -36,4 +44,8 @@ class Dimensions {
   static double radius5 = height10 / 2;
 
   static double iconSize24 = height10 * 2.4;
+
+  // List View Size
+  static double listViewImgSize = width1 * 120; // 120
+  static double listViewTextContSize = height1 * 105; //100
 }
