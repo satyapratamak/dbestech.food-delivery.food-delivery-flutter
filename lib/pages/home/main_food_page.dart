@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery_flutter/home/food_page_body.dart';
+import 'package:food_delivery_flutter/pages/home/food_page_body.dart';
 import 'package:food_delivery_flutter/utils/colors.dart';
 import 'package:food_delivery_flutter/utils/dimensions.dart';
 import 'package:food_delivery_flutter/widgets/big_text.dart';

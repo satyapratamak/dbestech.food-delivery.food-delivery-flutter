@@ -24,6 +24,7 @@ class Dimensions {
   static double height110 = height1 * 110;
   static double height100 = height1 * 100;
   static double height105 = height1 * 105;
+  static double height350 = height1 * 350;
 
   // dynamic width
   static double width1 = screenWidth / 411.42857142857144;
@@ -38,6 +39,9 @@ class Dimensions {
 
   static double font20 = height20;
   static double font15 = height15;
+  static double font24 = height24;
+  static double font1 = height1;
+  static double font26 = font1 * 26;
 
   static double radius20 = height20;
   static double radius30 = height30;
@@ -48,4 +52,13 @@ class Dimensions {
   // List View Size
   static double listViewImgSize = width1 * 120; // 120
   static double listViewTextContSize = height1 * 105; //100
+
+  // Popular Food Image
+  static double popularFoodImgSize = height350;
+
+  // Icon size
+  static double iconSize16 = height1 * 16;
+
+  // Bottom height
+  static double bottomHeightBar = height1 * 120;
 }
