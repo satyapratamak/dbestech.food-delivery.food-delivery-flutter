@@ -39,6 +39,7 @@ class Dimensions {
 
   static double font20 = height20;
   static double font15 = height15;
+  static double font16 = height1 * 16;
   static double font24 = height24;
   static double font1 = height1;
   static double font26 = font1 * 26;
