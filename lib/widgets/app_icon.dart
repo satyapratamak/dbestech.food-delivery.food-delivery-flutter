@@ -9,6 +9,7 @@ class AppIcon extends StatelessWidget {
   final Color backgroundColor;
   final Color iconColor;
   final double size;
+  final double iconSize;
 
   AppIcon({
     Key? key,
@@ -17,7 +18,9 @@ class AppIcon extends StatelessWidget {
         0xFFfcf4e4), // must use const value. can not use color from colors.dart
     this.iconColor = const Color(
         0xFF756d54), // must use const value. can not use color from colors.dart
-    this.size = 40, // must use const value. can not use Dimensions.dart
+    this.size = 40,
+    this.iconSize = 16,
+    // must use const value. can not use Dimensions.dart
   }) : super(key: key);
 
   @override
@@ -31,11 +34,17 @@ class AppIcon extends StatelessWidget {
             : BorderRadius.circular(size * Dimensions.height1 / 2),
         color: backgroundColor,
       ),
-      child: Icon(
-        icon,
-        color: iconColor,
-        size:
-            size <= 0 ? Dimensions.iconSize16 : (size - 15) * Dimensions.width1,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            icon,
+            color: iconColor,
+            size: size <= 0
+                ? Dimensions.iconSize16
+                : (iconSize) * Dimensions.width1,
+          )
+        ],
       ),
     );
   }
