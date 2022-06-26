@@ -1,4 +1,5 @@
 import 'package:food_delivery_flutter/data/repository/popular_product_repo.dart';
+import 'package:food_delivery_flutter/models/product_model.dart';
 import 'package:get/get.dart';
 
 class PopularProductController extends GetxController {
@@ -18,8 +19,9 @@ class PopularProductController extends GetxController {
     if (response.statusCode == 200) {
       // response success
 
+      print('got products');
       _popularProductList = []; // Make sure not repeated data
-      //_popularProductList.addAll();
+      _popularProductList.addAll(Product.fromJson(response.body).products);
       update(); // Like setState(){}
     }
   }

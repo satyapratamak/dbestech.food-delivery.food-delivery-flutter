@@ -18,7 +18,7 @@ class AppColumn extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Food Name
-        BigText(text: "Biriani", size: Dimensions.font26),
+        BigText(text: foodTitle, size: Dimensions.font26),
         SizedBox(height: Dimensions.height10),
         // Rating and Comments
         Row(
