@@ -53,18 +53,20 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     return Column(
       children: [
         GetBuilder<PopularProductController>(builder: (popularProducts) {
-          return Container(
-            //color: Colors.redAccent,
-            height: Dimensions.pageView,
-            child: PageView.builder(
-              controller: pageController,
-              itemCount: popularProducts.popularProductList.length,
-              itemBuilder: (context, position) {
-                return _buildPageItem(
-                    position, popularProducts.popularProductList[position]);
-              },
-            ),
-          );
+          return popularProducts.isLoaded
+              ? Container(
+                  //color: Colors.redAccent,
+                  height: Dimensions.pageView,
+                  child: PageView.builder(
+                    controller: pageController,
+                    itemCount: popularProducts.popularProductList.length,
+                    itemBuilder: (context, position) {
+                      return _buildPageItem(position,
+                          popularProducts.popularProductList[position]);
+                    },
+                  ),
+                )
+              : CircularProgressIndicator(color: AppColors.mainColor);
         }),
 
         GetBuilder<PopularProductController>(builder: (popularProducts) {
@@ -91,7 +93,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              BigText(text: "Popular", color: AppColors.mainBlackColor),
+              BigText(text: "Recommended", color: AppColors.mainBlackColor),
               SizedBox(width: Dimensions.width10),
               Container(
                 margin: EdgeInsets.only(bottom: Dimensions.height3),

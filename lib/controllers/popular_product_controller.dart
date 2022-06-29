@@ -10,6 +10,9 @@ class PopularProductController extends GetxController {
 
   List<dynamic> get popularProductList => _popularProductList;
 
+  bool _isLoaded = false;
+  bool get isLoaded => _isLoaded;
+
   Future<void> getPopularProductList() async {
     Response response = await popularProductRepo.getPopularProductList();
 
@@ -22,6 +25,7 @@ class PopularProductController extends GetxController {
       print('got products');
       _popularProductList = []; // Make sure not repeated data
       _popularProductList.addAll(Product.fromJson(response.body).products);
+      _isLoaded = true;
       update(); // Like setState(){}
     }
   }
