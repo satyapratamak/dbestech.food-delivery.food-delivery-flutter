@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
         showUnselectedLabels: false,
         currentIndex: _seletectedIndex,
         selectedFontSize: 0.0,
-        unselectedFontSize: 0.0,
+        unselectedFontSize: 0.1,
         onTap: onTapNav,
         items: [
           BottomNavigationBarItem(
