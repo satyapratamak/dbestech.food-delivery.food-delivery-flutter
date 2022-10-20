@@ -44,6 +44,7 @@ class Dimensions {
   static double width100 = width1 * 100;
   static double width120 = width1 * 120;
   static double width200 = width1 * 200;
+  static double width250 = width1 * 250;
 
   static double font20 = height20;
   static double font15 = height15;
