@@ -70,4 +70,7 @@ class Dimensions {
 
   // Bottom height
   static double bottomHeightBar = height1 * 120;
+
+  // Splash Image
+  static double splashImgWidth = width250;
 }

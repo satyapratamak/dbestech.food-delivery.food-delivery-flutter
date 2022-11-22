@@ -59,14 +59,14 @@ class _SplashScreenState extends State<SplashScreen>
             child: Center(
               child: Image.asset(
                 "assets/image/logo part 1.png",
-                width: Dimensions.width250,
+                width: Dimensions.splashImgWidth,
               ),
             ),
           ),
           Center(
             child: Image.asset(
               "assets/image/logo part 2.png",
-              width: Dimensions.width250,
+              width: Dimensions.splashImgWidth,
             ),
           ),
         ],

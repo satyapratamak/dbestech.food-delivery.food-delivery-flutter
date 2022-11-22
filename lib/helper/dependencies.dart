@@ -7,8 +7,10 @@ import 'package:food_delivery_flutter/data/repository/popular_product_repo.dart'
 import 'package:food_delivery_flutter/data/repository/recommended_product_repo.dart';
 import 'package:food_delivery_flutter/utils/app_constants.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> init() async {
+  final sharedPreferences = await SharedPreferences.getInstance();
   // ApiClient
   Get.lazyPut(() => ApiClient(appBaseUrl: AppConstants.BASE_URL));
 
