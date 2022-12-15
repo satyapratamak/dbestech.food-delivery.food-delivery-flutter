@@ -11,6 +11,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> init() async {
   final sharedPreferences = await SharedPreferences.getInstance();
+
+  // Shared Preferences
+  Get.lazyPut(() => sharedPreferences);
+
   // ApiClient
   Get.lazyPut(() => ApiClient(appBaseUrl: AppConstants.BASE_URL));
 
@@ -18,7 +22,7 @@ Future<void> init() async {
   Get.lazyPut(
       () => PopularProductRepo(apiClient: Get.find())); // find ApiClient
   Get.lazyPut(() => RecommendedProductRepo(apiClient: Get.find()));
-  Get.lazyPut(() => CartRepo());
+  Get.lazyPut(() => CartRepo(sharedPreferences: Get.find()));
 
   // Controller
   Get.lazyPut(() => PopularProductController(popularProductRepo: Get.find()));
