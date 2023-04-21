@@ -13,6 +13,11 @@ class CartController extends GetxController {
   Map<int, CartModel> _items = {};
   Map<int, CartModel> get items => _items;
 
+  /** 
+   * Only for storage and sharedpreferences
+  */
+  List<CartModel> storageItems = [];
+
   void addItem(ProductModel product, int quantity) {
     var totalQuantity = 0;
     if (_items.containsKey(product.id!)) {
@@ -106,5 +111,9 @@ class CartController extends GetxController {
       _totalAmount += value.price! * value.quantity!;
     });
     return _totalAmount;
+  }
+
+  List<CartModel> getCartData() {
+    return storageItems;
   }
 }
