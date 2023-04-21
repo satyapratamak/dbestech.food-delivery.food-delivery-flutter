@@ -116,4 +116,6 @@ class CartController extends GetxController {
   List<CartModel> getCartData() {
     return storageItems;
   }
+
+  set setCart(List<CartModel> items) {}
 }
