@@ -47,4 +47,8 @@ class CartRepo {
 
     return cartList;
   }
+
+  void addToCartHistoryList() {
+    for (int i = 0; i < cart.length; i++) {}
+  }
 }
