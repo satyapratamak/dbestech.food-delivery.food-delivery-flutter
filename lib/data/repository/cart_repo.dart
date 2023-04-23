@@ -11,6 +11,8 @@ class CartRepo {
 
   // Shared Preference save data as a String
   List<String> cart = [];
+
+  List<String> cartHistory = [];
   void addToCartList(List<CartModel> cartList) {
     cart = [];
     // convert objects to String because sharedpreference only accept String
@@ -49,6 +51,10 @@ class CartRepo {
   }
 
   void addToCartHistoryList() {
-    for (int i = 0; i < cart.length; i++) {}
+    for (int i = 0; i < cart.length; i++) {
+      cartHistory.add(cart[i]);
+    }
+    sharedPreferences.setStringList(
+        AppConstants.CART_HISTORY_LIST, cartHistory);
   }
 }
