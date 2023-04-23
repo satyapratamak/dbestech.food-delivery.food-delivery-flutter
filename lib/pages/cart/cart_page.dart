@@ -280,7 +280,7 @@ class CartPage extends StatelessWidget {
                 ),
               ),
 
-              // Add Button
+              // Check Out Button
               GestureDetector(
                 onTap: () {
                   //popularProduct.addItem(product);
