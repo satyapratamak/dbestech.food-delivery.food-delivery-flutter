@@ -17,16 +17,16 @@ class CartRepo {
   void addToCartList(List<CartModel> cartList) {
     //sharedPreferences.remove(AppConstants.CART_LIST);
     //sharedPreferences.remove(AppConstants.CART_HISTORY_LIST);
-    //sharedPreferences.remove(AppConstants.CART_HISTORY_LIST);
+    var time = DateTime.now().toString();
     cart = [];
     // convert objects to String because sharedpreference only accept String
-    /*
+
     cartList.forEach((element) {
+      element.time = time;
       return cart.add(jsonEncode(element));
     });
 
-    */
-    cartList.forEach((element) => cart.add(jsonEncode(element)));
+    //cartList.forEach((element) => cart.add(jsonEncode(element)));
 
     sharedPreferences.setStringList(AppConstants.CART_LIST, cart);
 
