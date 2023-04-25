@@ -13,7 +13,10 @@ class CartRepo {
   List<String> cart = [];
 
   List<String> cartHistory = [];
+
   void addToCartList(List<CartModel> cartList) {
+    //sharedPreferences.remove(AppConstants.CART_LIST);
+    //sharedPreferences.remove(AppConstants.CART_HISTORY_LIST);
     cart = [];
     // convert objects to String because sharedpreference only accept String
     /*
@@ -61,7 +64,7 @@ class CartRepo {
     cartHistory.forEach((element) =>
         cartHistoryList.add(CartModel.fromJson(jsonDecode(element))));
 
-    return cartHistoryList!;
+    return cartHistoryList;
   }
 
   void addToCartHistoryList() {
